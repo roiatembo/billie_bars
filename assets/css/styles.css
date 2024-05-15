@@ -22,7 +22,8 @@
   --------------------------------------------------------------*/
   
   :root {
-    --scarborough-black: #128b57;
+    --text-primary-color: #ffffff;
+    --background-primary: #37312F;
   }
   
   /*--------------------------------------------------------------
@@ -46,8 +47,9 @@
   }
   
   a {
-    color: #ffffff;
+    color: var(--text-primary-color);
     text-decoration: none;
+    cursor: pointer;
   }
   
   ul {
@@ -159,13 +161,13 @@
     background-color: transparent;
   }
 
-  .splide__arrow--prev {
+  .splide-hero .splide__arrow--prev {
     margin-left: 41px;
   }
 
-  .splide__arrow--next {
-    margin-right: 41px;
-  }
+ .splide-hero .splide__arrow--next {
+  margin-right: 41px;
+ }
 
   .splide__pagination {
     padding-left: 20px;
@@ -180,3 +182,71 @@
     margin-right: 20px;
     margin-bottom: 30px;
   }
+
+  .carousel-section {
+    margin: 20px 0;
+  }
+
+  .content-carousel .text-style {
+    font-size: 12px;
+    color: #656a3e;
+  }
+
+  .three-column-section {
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+
+  .three-column-container {
+    list-style-type: none;
+  }
+
+  .three-column-container li {
+    background-color: var(--background-primary);
+    min-height: 650px;
+    position: relative;
+  }
+
+  .three-column-container .image-section img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    bottom: 0;
+  }
+
+  .content-three-column {
+    color: var(--text-primary-color);
+    margin: 40px 0 0 40px;
+  }
+
+  .three-column-section .splide__arrow--prev {
+    margin-left: -14px;
+  }
+
+  .three-column-section .splide__arrow--next {
+    margin-right: -14px;
+  }
+
+  .content-three-column a {
+    cursor: pointer;
+    padding-top: 5px;
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  /* .splide-three-column ul {
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    right: 10px;
+    width: calc(100% + 10px);
+  }
+
+  .splide-three-column ul li {
+    position: relative;
+    width: calc(33.3333333333% - 10px);
+    margin-left: 10px;
+    box-sizing: border-box;
+  } */
