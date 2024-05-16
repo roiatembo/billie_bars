@@ -30,3 +30,12 @@ var threeColumnSplide = new Splide(".splide-three-column", {
 });
 
 threeColumnSplide.mount();
+
+var fourColumnSplide = new Splide(".splide-four-column", {
+  type: "loop",
+  perPage: 4,
+  perMove: 1,
+  gap: 10,
+});
+
+fourColumnSplide.mount();
