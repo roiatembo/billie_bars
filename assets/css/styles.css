@@ -94,9 +94,8 @@ h6 {
 /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
-
 .hero-section {
-  height: 100vh;
+  width: 100%;
 }
 
 .splide-hero .splide__slide {
@@ -105,6 +104,7 @@ h6 {
 
 .hero-section .image-section img {
   width: 100%;
+  height: 100%;
   position: absolute;
   object-fit: cover;
   top: 0;
@@ -153,6 +153,11 @@ h6 {
   padding-bottom: 30px;
   text-align: center;
 }
+
+.content-slider a:hover {
+  background-color: var(--text-secondary-color);
+}
+
 .splide__arrow {
   background-color: transparent;
   opacity: 1;
@@ -204,7 +209,7 @@ h6 {
 }
 
 .three-column-container {
-  list-style-type: none;
+  list-style-type: none
 }
 
 .three-column-container li {
@@ -217,6 +222,7 @@ h6 {
   position: absolute;
   object-fit: cover;
   width: 100%;
+  height: 100%;
   bottom: 0;
 }
 
@@ -246,29 +252,16 @@ h6 {
 
 .video-container {
   position: relative;
-  width: 100%;
-  height: 100%;
   margin-top: 10px;
+  min-height: 400px;
 }
 
-.overlay {
-  display: block;
-}
 
 .overlay img {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  text-align: center;
+  object-fit: cover;
   opacity: 1;
   transition: opacity 0.3s;
 }
@@ -299,6 +292,10 @@ h6 {
   height: 80px;
   position: relative;
   cursor: pointer;
+}
+
+.video-container-content img:hover {
+  transform: scale(1.1);
 }
 
 iframe {
@@ -347,6 +344,11 @@ iframe {
 .column-content a {
   background-color: var(--background-secondary);
   color: var(--text-secondary-color);
+}
+
+.column-content a:hover {
+  background-color: var(--text-primary-color);
+  border: solid 1px var(--background-primary);
 }
 
 .splide-four-column .splide__arrow--prev {
@@ -451,7 +453,7 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:start
+  align-items: start;
 }
 
 .two-row-content h2 {
@@ -473,6 +475,10 @@ iframe {
   color: var(--text-secondary-color);
 }
 
+.two-row-content a:hover {
+  background-color: var(--background-secondary);
+}
+
 /*--------------------------------------------------------------
   # Call To Action Section
   --------------------------------------------------------------*/
@@ -484,10 +490,9 @@ iframe {
 
 .cta-1 {
   margin: 0 auto;
-  width: 100%;
-  height: 100%;
   min-height: 704px;
   position: relative;
+  width: calc(100% - 20px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -499,7 +504,6 @@ iframe {
   display: flex;
   justify-content: center;
 }
-
 
 .seal {
   position: absolute;
@@ -525,7 +529,7 @@ iframe {
   align-items: center;
 }
 
-.container-700 h2{
+.container-700 h2 {
   font-size: 40px;
   font-weight: 500;
   letter-spacing: -0.5px;
@@ -559,6 +563,11 @@ iframe {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.container-700 a:hover {
+  background-color: var(--background-secondary);
+  color: var(--text-secondary-color);
+}
+
 .cta-2 {
   width: 100%;
   height: 100%;
@@ -569,8 +578,8 @@ iframe {
 .cta-2 ul {
   list-style-type: none;
   display: flex;
-  margin: 0 auto;
-  width: calc(100% - 60px);
+  justify-content: center;
+  width: calc(100% - 120px);
   z-index: 2;
   position: relative;
   left: 60px;
@@ -597,12 +606,16 @@ iframe {
   color: var(--text-secondary-color);
 }
 
-.content-cta-2 a{
+.content-cta-2 a {
   margin-top: 5px;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: 2px;
   color: var(--text-secondary-color);
+}
+
+.content-cta-2 a:hover {
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -613,11 +626,7 @@ iframe {
   padding: 0 10px;
 }
 
-.gallery-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+
 
 .gallery-container .row-section {
   display: flex;
