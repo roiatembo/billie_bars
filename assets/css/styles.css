@@ -199,7 +199,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-  # Three column card section
+  #Three column card section
   --------------------------------------------------------------*/
 
 .three-column-section {
@@ -214,7 +214,7 @@ h6 {
 
 .three-column-container li {
   background-color: var(--background-primary);
-  min-height: 650px;
+  min-height: 43vw;
   position: relative;
 }
 
@@ -222,7 +222,6 @@ h6 {
   position: absolute;
   object-fit: cover;
   width: 100%;
-  height: 100%;
   bottom: 0;
 }
 
@@ -253,7 +252,7 @@ h6 {
 .video-container {
   position: relative;
   margin-top: 10px;
-  min-height: 400px;
+  min-height: 25vw;
 }
 
 
