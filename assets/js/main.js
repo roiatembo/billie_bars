@@ -17,7 +17,7 @@ var carouselSplide = new Splide(".splide-carousel", {
   arrows: false,
   autoplay: true,
   speed: 170000,
-  interval: 0
+  interval: 0,
 });
 
 carouselSplide.mount();
@@ -27,6 +27,15 @@ var threeColumnSplide = new Splide(".splide-three-column", {
   perPage: 3,
   perMove: 1,
   gap: 10,
+  mediaQuery: "max",
+  breakpoints: {
+    1000: {
+      perPage: 2,
+    },
+    600: {
+      perPage: 1,
+    }
+  },
 });
 
 threeColumnSplide.mount();
@@ -36,6 +45,18 @@ var fourColumnSplide = new Splide(".splide-four-column", {
   perPage: 4,
   perMove: 1,
   gap: 10,
+  mediaQuery: "max",
+  breakpoints: {
+    1230: {
+      perPage: 3,
+    },
+    1000: {
+      perPage: 2,
+    },
+    600: {
+      perPage: 1,
+    }
+  },
 });
 
 fourColumnSplide.mount();
