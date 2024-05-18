@@ -8,19 +8,21 @@ var heroSplide = new Splide(".splide-hero", {
 
 heroSplide.mount();
 
-var carouselSplide = new Splide(".splide-carousel", {
-  type: "loop",
-  perPage: 3,
-  perMove: 5,
+var carouselSplide = new Splide('.splide-carousel', {
+  type: 'loop',
+  drag: 'free',
+  focus: 'center',
+  autoWidth: true,
+  gap: 40,
   pagination: false,
-  focus: 0,
   arrows: false,
-  autoplay: true,
-  speed: 170000,
-  interval: 0,
+  perPage: 4,
+  autoScroll: {
+    speed: 1,
+  }
 });
 
-carouselSplide.mount();
+carouselSplide.mount(window.splide.Extensions);
 
 var threeColumnSplide = new Splide(".splide-three-column", {
   type: "loop",
@@ -34,7 +36,7 @@ var threeColumnSplide = new Splide(".splide-three-column", {
     },
     600: {
       perPage: 1,
-    }
+    },
   },
 });
 
@@ -55,7 +57,7 @@ var fourColumnSplide = new Splide(".splide-four-column", {
     },
     600: {
       perPage: 1,
-    }
+    },
   },
 });
 
