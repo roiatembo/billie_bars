@@ -28,6 +28,7 @@ var threeColumnSplide = new Splide(".splide-three-column", {
   type: "loop",
   perPage: 3,
   perMove: 1,
+  pagination: false,
   gap: 10,
   mediaQuery: "max",
   breakpoints: {
@@ -45,7 +46,10 @@ threeColumnSplide.mount();
 var fourColumnSplide = new Splide(".splide-four-column", {
   type: "loop",
   perPage: 4,
+  width: '90%',
   perMove: 1,
+  pagination: false,
+  arrows: true,
   gap: 10,
   mediaQuery: "max",
   breakpoints: {
