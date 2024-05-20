@@ -15,25 +15,23 @@
     />
     <script>
       function showMobileNav() {
-        var mobileNav = $(".navbar").css("display");
+        var mobileNav = $(".nav-links").css("display");
         if (mobileNav === "none") {
-          $(".navbar").css("display", "flex");
+          $(".nav-links").css("display", "flex");
           $("#menu-icon").removeClass("bx-menu").addClass("bx-x");
         } else {
-          $(".navbar").css("display", "none");
+          $(".nav-links").css("display", "none");
           $("#menu-icon").removeClass("bx-x").addClass("bx-menu");
         }
       }
 
-      const overlay = function () {
-        var backround = document.getElementsByClassName("overlay");
-        backround.style.display = "none";
-      };
-
       const playVideo = function () {
-        overlay();
-        var video = document.getElementById("youtube-video");
-        video.src = video.src.replace("autoplay=0", "autoplay=1");
+        $(document).ready(function () {
+          $(".overlay").css("opacity", "0");
+          $("#video").css("display", "block");
+          $("#video")[0].play(
+);
+        });
       };
     </script>
 
@@ -77,11 +75,13 @@
     <nav class="navbar">
       <div class="container-1340">
         <div class="left-navbar">
-          <div id="menu-icon" class="image-section">
+          <div id="menu-icon" class="image-section" onclick="showMobileNav()">
             <img src="/assets/img/icon-nav-menu-burger-white.png" />
           </div>
           <div class="image-section">
-            <img src="/assets/img/graphics-logo-white.png" />
+            <a href="index.html"
+              ><img src="/assets/img/graphics-logo-white.png"
+            /></a>
           </div>
 
           <div class="nav-links">
@@ -351,20 +351,36 @@
             <img src="/assets/img/bitmap.png" />
           </div>
           <div class="video-container-content">
-            <div class="image-section">
+            <div class="image-section" onclick="playVideo()">
               <img src="/assets/img/combined-shape@3x.png" />
             </div>
             <p>What do Billie Bars do?</p>
           </div>
         </div>
-        <iframe
+        <video id="video" width="100%" height="400" controls>
+          <source
+            src="/assets/videos/dumyy-video_ee6ICxyL.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="/assets/videos/dumyy-video_ee6ICxyL.mp4"
+            type="video/ogg"
+          />
+          Your browser does not support the video tag. Please download the video
+          below to view it.
+          <a href="/assets/videos/dumyy-video_ee6ICxyL.mp4" download>
+            Download Video
+          </a>
+        </video>
+        <!-- <iframe
           id="youtube-video"
           width="100%"
           height="400"
-          src="/assets/videos/dumyy-video_ee6ICxyLhg.mp4"
+          src="/assets/videos/dumyy-video_ee6ICxyL.mp4"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           frameborder="0"
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
       </div>
     </section>
 
@@ -759,7 +775,8 @@
             <form>
               <input type="text" placeholder="Email Address" />
               <button type="submit">
-                SUBMIT<i class="bx bxs-right-arrow-alt"></i>
+                <span>SUBMIT</span>
+                <i class="bx bxs-right-arrow-alt"></i>
               </button>
             </form>
           </div>
@@ -813,9 +830,12 @@
               </ul>
             </div>
 
-            <button class="accordion"><h3>INSTALLATION & GUIDES</h3><div class="image-section">
-              <img src="/assets/img/icon-ui-arrow-slider-next.png" />
-            </div></button>
+            <button class="accordion">
+              <h3>INSTALLATION & GUIDES</h3>
+              <div class="image-section">
+                <img src="/assets/img/icon-ui-arrow-slider-next.png" />
+              </div>
+            </button>
             <div class="panel">
               <ul>
                 <li><a href="#">Videos</a></li>
@@ -825,9 +845,12 @@
               </ul>
             </div>
 
-            <button class="accordion"><h3>ABOUT</h3><div class="image-section">
-              <img src="/assets/img/icon-ui-arrow-slider-next.png" />
-            </div></button>
+            <button class="accordion">
+              <h3>ABOUT</h3>
+              <div class="image-section">
+                <img src="/assets/img/icon-ui-arrow-slider-next.png" />
+              </div>
+            </button>
             <div class="panel">
               <ul>
                 <li><a href="#">About Us</a></li>
@@ -836,9 +859,12 @@
               </ul>
             </div>
 
-            <button class="accordion"><h3>CONTACT</h3><div class="image-section">
-              <img src="/assets/img/icon-ui-arrow-slider-next.png" />
-            </div></button>
+            <button class="accordion">
+              <h3>CONTACT</h3>
+              <div class="image-section">
+                <img src="/assets/img/icon-ui-arrow-slider-next.png" />
+              </div>
+            </button>
             <div class="panel">
               <ul>
                 <li><a href="#">Contact Us</a></li>

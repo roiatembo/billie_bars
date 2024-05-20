@@ -8,7 +8,6 @@ var heroSplide = new Splide(".splide-hero", {
 
 heroSplide.mount();
 
-
 var carouselSplide = new Splide(".splide-carousel", {
   type: "loop",
   drag: "free",
@@ -68,7 +67,6 @@ var fourColumnSplide = new Splide(".splide-four-column", {
 
 fourColumnSplide.mount();
 
-
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -83,3 +81,11 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+$(document).ready(function () {
+  $(".close-top-bar").on("click", function () {
+    $(".top-bar").hide();
+  });
+
+  
+});

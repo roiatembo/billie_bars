@@ -120,6 +120,10 @@ h6 {
   font-weight: 800;
 }
 
+.close-top-bar:hover {
+  color: green;
+}
+
 .top-bar h2 {
   font-size: 12px;
   font-weight: bold;
@@ -160,6 +164,11 @@ h6 {
   display: none;
 }
 
+.left-navbar .image-section:nth-child(2):hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .nav-links ul {
   margin-left: 50px;
   list-style-type: none;
@@ -178,6 +187,14 @@ h6 {
   letter-spacing: 2px;
   text-align: center;
   color: var(--text-primary-color);
+  transition: transform 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: var(--background-primary);
+  background-color: var(--text-primary-color);
+  padding: 10px 20px;
+  
 }
 
 .icon-nav ul {
@@ -191,6 +208,11 @@ h6 {
   width: 25px;
   height: 25px;
   margin-right: 30px;
+}
+
+.icon-nav .image-section img:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .splide-hero .splide__slide {
@@ -355,6 +377,7 @@ h6 {
   min-height: 25vw;
 }
 
+
 .overlay img {
   position: absolute;
   width: 100%;
@@ -396,9 +419,8 @@ h6 {
   transform: scale(1.1);
 }
 
-iframe {
-  width: 100%;
-  object-fit: cover;
+video {
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -872,6 +894,11 @@ iframe {
   font-size: 14px;
 }
 
+.footer-column ul li a:hover {
+  text-decoration: underline;
+  color: var(--background-secondary);
+}
+
 .footer-column form {
   border: solid 1px var(--text-primary-color);
   width: 100%;
@@ -887,6 +914,10 @@ iframe {
   border-right: solid var(--text-primary-color) 1px;
 }
 
+.footer-column form input:focus {
+  color: var(--background-secondary);
+}
+
 .footer-column form button {
   padding: 13px 0 13px 20px;
   background-color: transparent;
@@ -899,6 +930,11 @@ iframe {
 }
 
 
+.footer-column form button:hover {
+  text-decoration: underline;
+  color: var(--background-secondary);
+}
+
 .social-icons {
   display: flex;
   flex-direction: column;
@@ -909,6 +945,11 @@ iframe {
   font-size: 14px;
   margin-bottom: 13px;
   display: flex;
+}
+
+.social-icons a:hover {
+  text-decoration: underline;
+  color: var(--background-secondary);
 }
 
 .social-icons img {
@@ -1062,6 +1103,7 @@ iframe {
     display: flex;
   }
 
+
   .left-navbar .image-section:nth-child(1) {
     height: 40px;
   }
@@ -1076,6 +1118,17 @@ iframe {
 
   .nav-links {
     display: none;
+    position: absolute;
+    background-color: var(--background-secondary);
+    top: 70px;
+    width: 100vw;
+    left: 0px;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.71;
   }
 
   .icon-nav ul li {
@@ -1087,6 +1140,10 @@ iframe {
   }
 
   .footer-column {
+    display: none;
+  }
+
+  .footer-column form button span {
     display: none;
   }
 
