@@ -8,10 +8,11 @@ var heroSplide = new Splide(".splide-hero", {
 
 heroSplide.mount();
 
-var carouselSplide = new Splide('.splide-carousel', {
-  type: 'loop',
-  drag: 'free',
-  focus: 'center',
+
+var carouselSplide = new Splide(".splide-carousel", {
+  type: "loop",
+  drag: "free",
+  focus: "center",
   autoWidth: true,
   gap: 40,
   pagination: false,
@@ -19,7 +20,7 @@ var carouselSplide = new Splide('.splide-carousel', {
   perPage: 4,
   autoScroll: {
     speed: 1,
-  }
+  },
 });
 
 carouselSplide.mount(window.splide.Extensions);
@@ -46,7 +47,7 @@ threeColumnSplide.mount();
 var fourColumnSplide = new Splide(".splide-four-column", {
   type: "loop",
   perPage: 4,
-  width: '90%',
+  width: "90%",
   perMove: 1,
   pagination: false,
   arrows: true,
@@ -66,3 +67,19 @@ var fourColumnSplide = new Splide(".splide-four-column", {
 });
 
 fourColumnSplide.mount();
+
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
